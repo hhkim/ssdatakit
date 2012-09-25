@@ -20,7 +20,7 @@ static NSString *const kURIRepresentationKey = @"URIRepresentation";
 
 + (NSManagedObjectContext *)mainContext {
 	if (!__managedObjectContext) {
-		__managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+		__managedObjectContext = [[NSManagedObjectContext alloc] init];
 		__managedObjectContext.persistentStoreCoordinator = [self persistentStoreCoordinator];
 	}
 	return __managedObjectContext;
